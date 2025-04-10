@@ -12,13 +12,13 @@ st.set_option("deprecation.showPyplotGlobalUse", False)
 
 st.set_page_config(page_title="Recommendtation")
 st.title("Recommendation Module")
-with open("D:\RealEstateProject\my_dataframe_norm.pkl", "rb") as f:
+with open("pages/my_dataframe_norm.pkl", "rb") as f:
     df = pickle.load(f)
-with open("D:\RealEstateProject\cosine_sim1", "rb") as f:
+with open("pages/cosine_sim1", "rb") as f:
     cosine_sim1 = pickle.load(f)
-with open("D:\RealEstateProject\cosine_sim2", "rb") as f:
+with open("pages/cosine_sim2", "rb") as f:
     cosine_sim2 = pickle.load(f)
-with open("D:\RealEstateProject\cosine_sim3", "rb") as f:
+with open("pages/cosine_sim3", "rb") as f:
     cosine_sim3 = pickle.load(f)
 
 

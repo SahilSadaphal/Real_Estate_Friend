@@ -12,8 +12,8 @@ st.set_option("deprecation.showPyplotGlobalUse", False)
 
 st.set_page_config(page_title="Analytics")
 st.title("Analytics")
-new_df = pd.read_csv("D:\RealEstateProject\data_viz.csv")
-with open("D:/RealEstateProject/pages/feature_text.pkl", "rb") as f:
+new_df = pd.read_csv("pages/data_viz.csv")
+with open("pages/feature_text.pkl", "rb") as f:
     feature_text = pickle.load(f)
 
 
@@ -42,7 +42,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 # ---------------------------------------------------------------------------------------------------------------------#
 sector = st.selectbox("Sector", new_df["sector"].sort_values().unique())
-wordcloud = pd.read_csv("D:\RealEstateProject\wordclouddf.csv")
+wordcloud = pd.read_csv("pages/wordclouddf.csv")
 
 
 def extract_feature(sector):

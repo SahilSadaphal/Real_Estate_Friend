@@ -6,12 +6,11 @@ import pickle
 
 st.set_page_config(page_title="PredictionPage")
 st.title("Prediction")
-with open("D:\RealEstateProject\df.pkl", "rb") as file:
+with open("pages/df.pkl", "rb") as file:
     df = pickle.load(file)
-with open("D:\RealEstateProject\pipeline.pkl", "rb") as file:
+with open("pages/pipeline.pkl", "rb") as file:
     pipeline = pickle.load(file)
 st.title("Hello!")
-
 
 property_type = st.selectbox("Property_Type", df["property_type"].unique())
 sector = st.selectbox("Sector", df["sector"].sort_values().unique())
